@@ -1,0 +1,29 @@
+RewriteEngine on
+
+RewriteRule ^accueil$ src/index.php
+
+RewriteRule ^preAccueil$ preAccueil.php
+RewriteRule ^errorConnexion$ index.php?connexion=0
+
+RewriteRule ^listRoom$ src/view/chambre/liste.php
+RewriteRule ^calendar$ src/view/chambre/disponibilite.php
+RewriteRule ^addLocataire$ src/view/locataire/add.php
+RewriteRule ^addLocataireS$ src/view/locataire/add.php?ok=1
+RewriteRule ^addLocataireE$ src/view/locataire/add.php?ok=0
+RewriteRule ^listLocataire$ src/view/locataire/liste.php?ok=1
+RewriteRule ^locataireC$ src/controller/locataireCtrl.php
+
+RewriteRule ^addRoom$ src/view/chambre/add.php
+RewriteRule ^addRoomS$ src/view/chambre/add.php?ok=1
+RewriteRule ^addRoomE$ src/view/chambre/add.php?ok=0
+
+RewriteRule ^deconnexion$ src/controller/userController.php?deconnexion=1
+RewriteRule ^chambreC$ src/controller/chambreController.php
+RewriteRule ^clientC$ src/controller/clientController.php
+
+RewriteRule ^userC$ src/controller/userController.php
+RewriteRule ^newUser$ src/view/user/add.php
+RewriteRule ^newUserS$ src/view/user/add.php?ok=1
+RewriteRule ^newUserE$ src/view/user/add.php?ok=0
+RewriteRule ^newUserC$ src/view/user/add.php?court=1
+RewriteRule ^listeUser$ src/view/user/liste.php
